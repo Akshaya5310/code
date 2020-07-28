@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Java OOPS Concepts – codesmashers</title>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+
+
+
+<link rel="stylesheet" id="astra-theme-css-css" href="https://akshaya5310.github.io/code/wp-content/themes/astra/assets/css/minified/style.min.css" media="all">
+<style id="astra-theme-css-inline-css">
+html{font-size:100%;}a,.page-title{color:#fb2056;}a:hover,a:focus{color:#fb2056;}body,button,input,select,textarea,.ast-button,.ast-custom-button{font-family:'Noto Sans',sans-serif;font-weight:400;font-size:16px;font-size:1rem;line-height:1.7;}blockquote{color:#000000;}h1,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6,.site-title,.site-title a{font-family:'Montserrat',sans-serif;font-weight:400;}.site-title{font-size:22px;font-size:1.375rem;}header .site-logo-img .custom-logo-link img{max-width:120px;}.astra-logo-svg{width:120px;}.ast-archive-description .ast-archive-title{font-size:40px;font-size:2.5rem;}.site-header .site-description{font-size:15px;font-size:0.9375rem;}.entry-title{font-size:30px;font-size:1.875rem;}.comment-reply-title{font-size:26px;font-size:1.625rem;}.ast-comment-list #cancel-comment-reply-link{font-size:16px;font-size:1rem;}h1,.entry-content h1{font-size:64px;font-size:4rem;font-family:'Montserrat',sans-serif;text-transform:uppercase;}h2,.entry-content h2{font-size:40px;font-size:2.5rem;font-family:'Montserrat',sans-serif;line-height:1.4;text-transform:uppercase;}h3,.entry-content h3{font-size:24px;font-size:1.5rem;font-family:'Montserrat',sans-serif;}h4,.entry-content h4{font-size:20px;font-size:1.25rem;}h5,.entry-content h5{font-size:18px;font-size:1.125rem;}h6,.entry-content h6{font-size:15px;font-size:0.9375rem;}.ast-single-post .entry-title,.page-title{font-size:30px;font-size:1.875rem;}#secondary,#secondary button,#secondary input,#secondary select,#secondary textarea{font-size:16px;font-size:1rem;}::selection{background-color:#fb2056;color:#ffffff;}body,h1,.entry-title a,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6,.wc-block-grid__product-title{color:#222222;}.tagcloud a:hover,.tagcloud a:focus,.tagcloud a.current-item{color:#ffffff;border-color:#fb2056;background-color:#fb2056;}.main-header-menu a,.ast-header-custom-item a{color:#222222;}.main-header-menu li:hover > a,.main-header-menu li:hover > .ast-menu-toggle,.main-header-menu .ast-masthead-custom-menu-items a:hover,.main-header-menu li.focus > a,.main-header-menu li.focus > .ast-menu-toggle,.main-header-menu .current-menu-item > a,.main-header-menu .current-menu-ancestor > a,.main-header-menu .current_page_item > a,.main-header-menu .current-menu-item > .ast-menu-toggle,.main-header-menu .current-menu-ancestor > .ast-menu-toggle,.main-header-menu .current_page_item > .ast-menu-toggle{color:#fb2056;}input:focus,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="reset"]:focus,input[type="search"]:focus,textarea:focus{border-color:#fb2056;}input[type="radio"]:checked,input[type=reset],input[type="checkbox"]:checked,input[type="checkbox"]:hover:checked,input[type="checkbox"]:focus:checked,input[type=range]::-webkit-slider-thumb{border-color:#fb2056;background-color:#fb2056;box-shadow:none;}.site-footer a:hover + .post-count,.site-footer a:focus + .post-count{background:#fb2056;border-color:#fb2056;}.ast-small-footer{color:#d3d3d3;}.ast-small-footer > .ast-footer-overlay{background-color:#191919;}.ast-small-footer a{color:#fb2056;}.ast-small-footer a:hover{color:#fb2056;}.footer-adv .footer-adv-overlay{border-top-style:solid;border-top-color:#7a7a7a;}.ast-comment-meta{line-height:1.666666667;font-size:13px;font-size:0.8125rem;}.single .nav-links .nav-previous,.single .nav-links .nav-next,.single .ast-author-details .author-title,.ast-comment-meta{color:#fb2056;}.entry-meta,.entry-meta *{line-height:1.45;color:#fb2056;}.entry-meta a:hover,.entry-meta a:hover *,.entry-meta a:focus,.entry-meta a:focus *{color:#fb2056;}.ast-404-layout-1 .ast-404-text{font-size:200px;font-size:12.5rem;}.widget-title{font-size:22px;font-size:1.375rem;color:#222222;}#cat option,.secondary .calendar_wrap thead a,.secondary .calendar_wrap thead a:visited{color:#fb2056;}.secondary .calendar_wrap #today,.ast-progress-val span{background:#fb2056;}.secondary a:hover + .post-count,.secondary a:focus + .post-count{background:#fb2056;border-color:#fb2056;}.calendar_wrap #today > a{color:#ffffff;}.ast-pagination a,.page-links .page-link,.single .post-navigation a{color:#fb2056;}.ast-pagination a:hover,.ast-pagination a:focus,.ast-pagination > span:hover:not(.dots),.ast-pagination > span.current,.page-links > .page-link,.page-links .page-link:hover,.post-navigation a:hover{color:#fb2056;}.ast-header-break-point .ast-mobile-menu-buttons-minimal.menu-toggle{background:transparent;color:#fb2056;}.ast-header-break-point .ast-mobile-menu-buttons-outline.menu-toggle{background:transparent;border:1px solid #fb2056;color:#fb2056;}.ast-header-break-point .ast-mobile-menu-buttons-fill.menu-toggle{background:#fb2056;color:#ffffff;}@media (max-width:782px){.entry-content .wp-block-columns .wp-block-column{margin-left:0px;}}@media (max-width:921px){#secondary.secondary{padding-top:0;}.ast-separate-container .ast-article-post,.ast-separate-container .ast-article-single{padding:1.5em 2.14em;}.ast-separate-container #primary,.ast-separate-container #secondary{padding:1.5em 0;}.ast-separate-container.ast-right-sidebar #secondary{padding-left:1em;padding-right:1em;}.ast-separate-container.ast-two-container #secondary{padding-left:0;padding-right:0;}.ast-page-builder-template .entry-header #secondary{margin-top:1.5em;}.ast-page-builder-template #secondary{margin-top:1.5em;}#primary,#secondary{padding:1.5em 0;margin:0;}.ast-left-sidebar #content > .ast-container{display:flex;flex-direction:column-reverse;width:100%;}.ast-author-box img.avatar{margin:20px 0 0 0;}.ast-pagination{padding-top:1.5em;text-align:center;}.ast-pagination .next.page-numbers{display:inherit;float:none;}}@media (max-width:921px){.ast-page-builder-template.ast-left-sidebar #secondary{padding-right:20px;}.ast-page-builder-template.ast-right-sidebar #secondary{padding-left:20px;}.ast-right-sidebar #primary{padding-right:0;}.ast-right-sidebar #secondary{padding-left:0;}.ast-left-sidebar #primary{padding-left:0;}.ast-left-sidebar #secondary{padding-right:0;}.ast-pagination .prev.page-numbers{padding-left:.5em;}.ast-pagination .next.page-numbers{padding-right:.5em;}}@media (min-width:922px){.ast-separate-container.ast-right-sidebar #primary,.ast-separate-container.ast-left-sidebar #primary{border:0;}.ast-separate-container.ast-right-sidebar #secondary,.ast-separate-container.ast-left-sidebar #secondary{border:0;margin-left:auto;margin-right:auto;}.ast-separate-container.ast-two-container #secondary .widget:last-child{margin-bottom:0;}.ast-separate-container .ast-comment-list li .comment-respond{padding-left:2.66666em;padding-right:2.66666em;}.ast-author-box{-js-display:flex;display:flex;}.ast-author-bio{flex:1;}.error404.ast-separate-container #primary,.search-no-results.ast-separate-container #primary{margin-bottom:4em;}}@media (min-width:922px){.ast-right-sidebar #primary{border-right:1px solid #eee;}.ast-right-sidebar #secondary{border-left:1px solid #eee;margin-left:-1px;}.ast-left-sidebar #primary{border-left:1px solid #eee;}.ast-left-sidebar #secondary{border-right:1px solid #eee;margin-right:-1px;}.ast-separate-container.ast-two-container.ast-right-sidebar #secondary{padding-left:30px;padding-right:0;}.ast-separate-container.ast-two-container.ast-left-sidebar #secondary{padding-right:30px;padding-left:0;}}.elementor-button-wrapper .elementor-button{border-style:solid;border-top-width:0;border-right-width:0;border-left-width:0;border-bottom-width:0;}body .elementor-button.elementor-size-sm,body .elementor-button.elementor-size-xs,body .elementor-button.elementor-size-md,body .elementor-button.elementor-size-lg,body .elementor-button.elementor-size-xl,body .elementor-button{border-radius:30px;padding-top:17px;padding-right:40px;padding-bottom:17px;padding-left:40px;}.elementor-button-wrapper .elementor-button{border-color:#fb2056;background-color:#fb2056;}.elementor-button-wrapper .elementor-button:hover,.elementor-button-wrapper .elementor-button:focus{color:#ffffff;background-color:#fb2056;border-color:#fb2056;}.wp-block-button .wp-block-button__link,.elementor-button-wrapper .elementor-button,.elementor-button-wrapper .elementor-button:visited{color:#ffffff;}.elementor-button-wrapper .elementor-button{font-family:inherit;font-weight:700;line-height:1;text-transform:uppercase;}body .elementor-button.elementor-size-sm,body .elementor-button.elementor-size-xs,body .elementor-button.elementor-size-md,body .elementor-button.elementor-size-lg,body .elementor-button.elementor-size-xl,body .elementor-button{font-size:14px;font-size:0.875rem;}.wp-block-button .wp-block-button__link{border-style:solid;border-top-width:0;border-right-width:0;border-left-width:0;border-bottom-width:0;border-color:#fb2056;background-color:#fb2056;color:#ffffff;font-family:inherit;font-weight:700;line-height:1;text-transform:uppercase;font-size:14px;font-size:0.875rem;border-radius:30px;padding-top:17px;padding-right:40px;padding-bottom:17px;padding-left:40px;}.wp-block-button .wp-block-button__link:hover,.wp-block-button .wp-block-button__link:focus{color:#ffffff;background-color:#fb2056;border-color:#fb2056;}.elementor-widget-heading h2.elementor-heading-title{line-height:1.4;}.menu-toggle,button,.ast-button,.ast-custom-button,.button,input#submit,input[type="button"],input[type="submit"],input[type="reset"]{border-style:solid;border-top-width:0;border-right-width:0;border-left-width:0;border-bottom-width:0;color:#ffffff;border-color:#fb2056;background-color:#fb2056;border-radius:30px;padding-top:17px;padding-right:40px;padding-bottom:17px;padding-left:40px;font-family:inherit;font-weight:700;font-size:14px;font-size:0.875rem;line-height:1;text-transform:uppercase;}button:focus,.menu-toggle:hover,button:hover,.ast-button:hover,.button:hover,input[type=reset]:hover,input[type=reset]:focus,input#submit:hover,input#submit:focus,input[type="button"]:hover,input[type="button"]:focus,input[type="submit"]:hover,input[type="submit"]:focus{color:#ffffff;background-color:#fb2056;border-color:#fb2056;}@media (min-width:921px){.ast-container{max-width:100%;}}@media (min-width:544px){.ast-container{max-width:100%;}}@media (max-width:544px){.ast-separate-container .ast-article-post,.ast-separate-container .ast-article-single{padding:1.5em 1em;}.ast-separate-container #content .ast-container{padding-left:0.54em;padding-right:0.54em;}.ast-separate-container #secondary{padding-top:0;}.ast-separate-container.ast-two-container #secondary .widget{margin-bottom:1.5em;padding-left:1em;padding-right:1em;}.ast-separate-container .comments-count-wrapper{padding:1.5em 1em;}.ast-separate-container .ast-comment-list li.depth-1{padding:1.5em 1em;margin-bottom:1.5em;}.ast-separate-container .ast-comment-list .bypostauthor{padding:.5em;}.ast-separate-container .ast-archive-description{padding:1.5em 1em;}.ast-search-menu-icon.ast-dropdown-active .search-field{width:170px;}}@media (max-width:544px){.ast-comment-list .children{margin-left:0.66666em;}.ast-separate-container .ast-comment-list .bypostauthor li{padding:0 0 0 .5em;}}@media (max-width:921px){.ast-mobile-header-stack .main-header-bar .ast-search-menu-icon{display:inline-block;}.ast-header-break-point.ast-header-custom-item-outside .ast-mobile-header-stack .main-header-bar .ast-search-icon{margin:0;}.ast-comment-avatar-wrap img{max-width:2.5em;}.comments-area{margin-top:1.5em;}.ast-separate-container .comments-count-wrapper{padding:2em 2.14em;}.ast-separate-container .ast-comment-list li.depth-1{padding:1.5em 2.14em;}.ast-separate-container .comment-respond{padding:2em 2.14em;}}@media (max-width:921px){.ast-header-break-point .main-header-bar .ast-search-menu-icon.slide-search .search-form{right:0;}.ast-header-break-point .ast-mobile-header-stack .main-header-bar .ast-search-menu-icon.slide-search .search-form{right:-1em;}.ast-comment-avatar-wrap{margin-right:0.5em;}}@media (max-width:544px){.ast-separate-container .comment-respond{padding:1.5em 1em;}}@media (min-width:545px){.ast-page-builder-template .comments-area,.single.ast-page-builder-template .entry-header,.single.ast-page-builder-template .post-navigation{max-width:1240px;margin-left:auto;margin-right:auto;}}@media (max-width:921px){.ast-archive-description .ast-archive-title{font-size:40px;}.entry-title{font-size:30px;}h1,.entry-content h1{font-size:44px;}h2,.entry-content h2{font-size:32px;}h3,.entry-content h3{font-size:20px;}.ast-single-post .entry-title,.page-title{font-size:30px;}}@media (max-width:544px){.comment-reply-title{font-size:24px;font-size:1.6rem;}.ast-comment-meta{font-size:12px;font-size:0.8rem;}.widget-title{font-size:21px;font-size:1.4rem;}body,button,input,select,textarea,.ast-button,.ast-custom-button{font-size:15px;font-size:0.9375rem;}.ast-comment-list #cancel-comment-reply-link{font-size:15px;font-size:0.9375rem;}#secondary,#secondary button,#secondary input,#secondary select,#secondary textarea{font-size:15px;font-size:0.9375rem;}.site-title{font-size:20px;font-size:1.25rem;}.ast-archive-description .ast-archive-title{font-size:40px;}.site-header .site-description{font-size:14px;font-size:0.875rem;}.entry-title{font-size:30px;}h1,.entry-content h1{font-size:30px;}h2,.entry-content h2{font-size:24px;}h3,.entry-content h3{font-size:20px;}h4,.entry-content h4{font-size:19px;font-size:1.1875rem;}h5,.entry-content h5{font-size:16px;font-size:1rem;}h6,.entry-content h6{font-size:15px;font-size:0.9375rem;}.ast-single-post .entry-title,.page-title{font-size:30px;}.ast-header-break-point .site-branding img,.ast-header-break-point #masthead .site-logo-img .custom-logo-link img{max-width:100px;}.astra-logo-svg{width:100px;}.ast-header-break-point .site-logo-img .custom-mobile-logo-link img{max-width:100px;}}@media (max-width:921px){html{font-size:91.2%;}}@media (max-width:544px){html{font-size:100%;}}@media (min-width:922px){.ast-container{max-width:1240px;}}@font-face {font-family: "Astra";src: url(https://akshaya5310.github.io/code/wp-content/themes/astra/assets/fonts/astra.woff) format("woff"),url(https://akshaya5310.github.io/code/wp-content/themes/astra/assets/fonts/astra.ttf) format("truetype"),url(https://akshaya5310.github.io/code/wp-content/themes/astra/assets/fonts/astra.svg#astra) format("svg");font-weight: normal;font-style: normal;font-display: fallback;}@media (max-width:780px) {.main-header-bar .main-header-bar-navigation{display:none;}}.ast-desktop .main-header-menu.submenu-with-border .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .children,.ast-desktop .main-header-menu.submenu-with-border .astra-full-megamenu-wrapper{border-color:#fb2056;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .children{border-top-width:2px;border-right-width:0px;border-left-width:0px;border-bottom-width:0px;border-style:solid;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .children .children{top:-2px;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu a,.ast-desktop .main-header-menu.submenu-with-border .children a{border-bottom-width:0px;border-style:solid;border-color:#eaeaea;}@media (min-width:922px){.main-header-menu .sub-menu li.ast-left-align-sub-menu:hover > ul,.main-header-menu .sub-menu li.ast-left-align-sub-menu.focus > ul{margin-left:-0px;}}.ast-small-footer{border-top-style:solid;border-top-width:0;border-top-color:#7a7a7a;}.ast-small-footer-wrap{text-align:center;}@media (max-width:920px){.ast-404-layout-1 .ast-404-text{font-size:100px;font-size:6.25rem;}}.ast-breadcrumbs .trail-browse,.ast-breadcrumbs .trail-items,.ast-breadcrumbs .trail-items li{display:inline-block;margin:0;padding:0;border:none;background:inherit;text-indent:0;}.ast-breadcrumbs .trail-browse{font-size:inherit;font-style:inherit;font-weight:inherit;color:inherit;}.ast-breadcrumbs .trail-items{list-style:none;}.trail-items li::after{padding:0 0.3em;content:"\00bb";}.trail-items li:last-of-type::after{display:none;}h1,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6{color:#222222;}.ast-header-break-point .main-header-bar{border-bottom-width:0;}@media (min-width:922px){.main-header-bar{border-bottom-width:0;}}@media (min-width:922px){#primary{width:70%;}#secondary{width:30%;}}.ast-safari-browser-less-than-11 .main-header-menu .menu-item, .ast-safari-browser-less-than-11 .main-header-bar .ast-masthead-custom-menu-items{display:block;}.main-header-menu .menu-item, .main-header-bar .ast-masthead-custom-menu-items{-js-display:flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}.main-header-menu > .menu-item > a{height:100%;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-js-display:flex;display:flex;}.ast-primary-menu-disabled .main-header-bar .ast-masthead-custom-menu-items{flex:unset;}.header-main-layout-1 .ast-flex.main-header-container, .header-main-layout-3 .ast-flex.main-header-container{-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;}
+</style>
+<link rel="stylesheet" id="astra-google-fonts-css" href="//fonts.googleapis.com/css?family=Noto+Sans%3A400%2C700%7CMontserrat%3A400%2C&display=fallback&ver=2.4.5" media="all">
+<link rel="stylesheet" id="astra-menu-animation-css" href="https://akshaya5310.github.io/code/wp-content/themes/astra/assets/css/minified/menu-animation.min.css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://akshaya5310.github.io/code/wp-includes/css/dist/block-library/style.min.css" media="all">
+
+
+
+
+
+
+
+
+
+        <script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script>
+        
+<style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style></head>
+
+<body itemtype="https://schema.org/Blog" itemscope="itemscope" class="post-template-default single single-post postid-484 single-format-standard ast-desktop ast-separate-container ast-two-container ast-right-sidebar astra-2.4.5 ast-header-custom-item-inside ast-blog-single-style-1 ast-single-post ast-replace-site-logo-transparent ast-inherit-site-logo-transparent ast-normal-title-enabled elementor-default">
+
+<div class="hfeed site" id="page">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+	
+		<header class="site-header ast-primary-submenu-animation-fade header-main-layout-1 ast-primary-menu-enabled ast-menu-toggle-icon ast-mobile-header-inline" id="masthead" itemtype="https://schema.org/WPHeader" itemscope="itemscope" itemid="#masthead">
+
+			
+			
+<div class="main-header-bar-wrap">
+	<div class="main-header-bar">
+				<div class="ast-container">
+
+			<div class="ast-flex main-header-container">
+				
+		<div class="site-branding">
+			<div class="ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
+				<div class="ast-site-title-wrap">
+						<span class="site-title" itemprop="name">
+				<a href="https://akshaya5310.github.io/code/" rel="home" itemprop="url">
+					codesmashers
+				</a>
+			</span>
+						
+					</div>			</div>
+		</div>
+
+		
+				<div class="ast-mobile-menu-buttons">
+
+			
+					<div class="ast-button-wrap">
+			<button type="button" class="menu-toggle main-header-menu-toggle  ast-mobile-menu-buttons-fill " aria-controls="primary-menu" aria-expanded="false">
+				<span class="screen-reader-text">Main Menu</span>
+				<span class="menu-toggle-icon"></span>
+							</button>
+		</div>
+			
+			
+		</div>
+			<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="ast-flex-grow-1 navigation-accessibility" id="site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation"><ul id="primary-menu" class="main-header-menu ast-nav-menu ast-flex ast-justify-content-flex-end  submenu-with-border astra-menu-animation-fade "><li id="menu-item-558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-558"><a href="https://akshaya5310.github.io/code/">Home</a></li>
+<li id="menu-item-559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-559"><a href="https://akshaya5310.github.io/code/about/">About</a></li>
+<li id="menu-item-560" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-560"><a href="https://akshaya5310.github.io/code/projects/">Blog</a></li>
+<li id="menu-item-561" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-561"><a href="https://akshaya5310.github.io/code/contact/">Contact</a></li>
+<li id="menu-item-562" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-562"><a href="https://akshaya5310.github.io/code/services/">Services</a></li>
+			<li class="ast-masthead-custom-menu-items search-custom-menu-item">
+						<div class="ast-search-menu-icon slide-search" id="ast-search-form" role="search" tabindex="-1">
+			<div class="ast-search-icon">
+				<a class="slide-search astra-search-icon" aria-label="Search icon link" href="#">
+					<span class="screen-reader-text">Search</span>
+				</a>
+			</div>
+			<form role="search" method="get" class="search-form" action="https://akshaya5310.github.io/code/">
+			<label>
+				<span class="screen-reader-text">Search for:</span>
+				<input type="search" class="search-field" placeholder="Search …" value="" name="s" role="search" tabindex="-1">
+			</label>
+			<button type="submit" class="search-submit" value="Search" aria-label="search submit"><i class="astra-search-icon"></i></button>
+		</form>		</div>
+					</li>
+			</ul></div></nav></div></div>			</div>
+		</div>
+			</div> 
+</div> 
+
+			
+		</header>
+
+		
+	
+	
+	<div id="content" class="site-content">
+
+		<div class="ast-container">
+
+		
+
+	<div id="primary" class="content-area primary">
+
+		
+					<main id="main" class="site-main">
+
+				
+					
+					
+
+<article class="post-484 post type-post status-publish format-standard has-post-thumbnail hentry category-programming tag-java-oops tag-oops tag-oops-concepts ast-article-single" id="post-484" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
+
+	
+	
+<div class="ast-post-format- single-layout-1">
+
+	
+	<header class="entry-header ">
+
+		
+				<div class="ast-single-post-order">
+			<h1 class="entry-title" itemprop="headline">Java OOPS Concepts</h1><div class="entry-meta">			<span class="comments-link">
+				<a href="https://akshaya5310.github.io/code/java-oops-concepts/#comments">2 Comments</a>			</span>
+
+			 / <span class="cat-links"><a href="https://akshaya5310.github.io/code/category/programming/" rel="category tag">programming</a></span> / By <span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="View all posts by jaga" href="https://akshaya5310.github.io/code/author/jaga/" rel="author" class="url fn n" itemprop="url">
+				<span class="author-name" itemprop="name">jaga</span>
+			</a>
+		</span>
+
+		</div>		</div>
+		<div class="post-thumb-img-content post-thumb"><img width="1024" height="683" src="https://akshaya5310.github.io/code/wp-content/uploads/2020/07/businessman-man-space-desk-7059-1024x683.jpg" class="attachment-large size-large wp-post-image" alt="" itemprop="image" srcset="https://akshaya5310.github.io/code/wp-content/uploads/2020/07/businessman-man-space-desk-7059-1024x683.jpg 1024w,https://akshaya5310.github.io/code/wp-content/uploads/2020/07/businessman-man-space-desk-7059-300x200.jpg 300w,https://akshaya5310.github.io/code/wp-content/uploads/2020/07/businessman-man-space-desk-7059-768x512.jpg 768w,https://akshaya5310.github.io/code/wp-content/uploads/2020/07/businessman-man-space-desk-7059-1536x1024.jpg 1536w,https://akshaya5310.github.io/code/wp-content/uploads/2020/07/businessman-man-space-desk-7059-2048x1365.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px"></div>
+		
+	</header>
+
+	
+	<div class="entry-content clear" itemprop="text">
+
+		
+		
+<p>In this page, we will learn about the basics of OOPs. Object-Oriented Programming is a paradigm that provides many concepts, such as <strong>inheritance</strong>, <strong>data binding</strong>, <strong>polymorphism</strong>, etc.</p>
+
+
+
+<p><strong>Simula</strong> is considered the first object-oriented programming language. The programming paradigm where everything is represented as an object is known as a truly object-oriented programming language.</p>
+
+
+
+<p><strong>Smalltalk</strong> is considered the first truly object-oriented programming language.</p>
+
+
+
+<p>The popular object-oriented languages are <a href="https://www.javatpoint.com/java-tutorial">Java</a>, <a href="https://www.javatpoint.com/c-sharp-tutorial">C#</a>, <a href="https://www.javatpoint.com/php-tutorial">PHP</a>, <a href="https://www.javatpoint.com/python-tutorial">Python</a>, <a href="https://www.javatpoint.com/cpp-tutorial">C++</a>, etc.</p>
+
+
+
+<p>The main aim of object-oriented programming is to implement real-world entities, for example, object, classes, abstraction, inheritance, polymorphism, etc.</p>
+
+
+
+<h2 id="oops">OOPs (Object-Oriented Programming System)</h2>
+
+
+
+<p><strong>Object</strong> means a real-world entity such as a pen, chair, table, computer, watch, etc. <strong>Object-Oriented Programming</strong> is a methodology or paradigm to design a program using classes and objects. It simplifies software development and maintenance by providing some concepts:</p>
+
+
+
+<ul><li><a href="https://www.javatpoint.com/object-and-class-in-java">Object</a></li><li>Class</li><li><a href="https://www.javatpoint.com/inheritance-in-java">Inheritance</a></li><li><a href="https://www.javatpoint.com/runtime-polymorphism-in-java">Polymorphism</a></li><li><a href="https://www.javatpoint.com/abstract-class-in-java">Abstraction</a></li><li><a href="https://www.javatpoint.com/encapsulation">Encapsulation</a></li></ul>
+
+
+
+<p>Apart from these concepts, there are some other terms which are used in Object-Oriented design:</p>
+
+
+
+<ul><li>Coupling</li><li>Cohesion</li><li>Association</li><li>Aggregation</li><li>Composition</li></ul>
+
+
+
+<figure class="wp-block-image"><img src="https://static.javatpoint.com/images/java-oops.png" alt="Java OOPs Concepts"></figure>
+
+
+
+<p><ins><ins></ins></ins></p>
+
+
+
+<h2>Object</h2>
+
+
+
+<figure class="wp-block-image"><img src="https://static.javatpoint.com/images/objects.png" alt="Java Object"></figure>
+
+
+
+<p>Any entity that has state and behavior is known as an object. For example, a chair, pen, table, keyboard, bike, etc. It can be physical or logical.</p>
+
+
+
+<p>An Object can be defined as an instance of a class. An object contains an address and takes up some space in memory. Objects can communicate without knowing the details of each other’s data or code. The only necessary thing is the type of message accepted and the type of response returned by the objects.</p>
+
+
+
+<p><strong>Example:</strong> A dog is an object because it has states like color, name, breed, etc. as well as behaviors like wagging the tail, barking, eating, etc.</p>
+
+
+
+<h2>Class</h2>
+
+
+
+<p><em>Collection of objects</em> is called class. It is a logical entity.</p>
+
+
+
+<p>A class can also be defined as a blueprint from which you can create an individual object. Class doesn’t consume any space.</p>
+
+
+
+<h3>Inheritance</h3>
+
+
+
+<p><em>When one object acquires all the properties and behaviors of a parent object</em>, it is known as inheritance. It provides code reusability. It is used to achieve runtime polymorphism.</p>
+
+
+
+<figure class="wp-block-image"><img src="https://static.javatpoint.com/images/polymorphism.gif" alt="Polymorphism in Java"></figure>
+
+
+
+<h3>Polymorphism</h3>
+
+
+
+<p>If <em>one task is performed in different ways</em>, it is known as polymorphism. For example: to convince the customer differently, to draw something, for example, shape, triangle, rectangle, etc.</p>
+
+
+
+<p>In Java, we use method overloading and method overriding to achieve polymorphism.</p>
+
+
+
+<p>Another example can be to speak something; for example, a cat speaks meow, dog barks woof, etc.</p>
+
+
+
+<h4>Abstraction</h4>
+
+
+
+<p><em>Hiding internal details and showing functionality</em> is known as abstraction. For example phone call, we don’t know the internal processing.</p>
+
+
+
+<p>In Java, we use abstract class and interface to achieve abstraction.</p>
+
+
+
+<figure class="wp-block-image"><img src="https://static.javatpoint.com/images/capsule.png" alt="Encapsulation in Java OOPs Concepts"></figure>
+
+
+
+<h3>Encapsulation</h3>
+
+
+
+<p><em>Binding (or wrapping) code and data together into a single unit are known as encapsulation</em>. For example, a capsule, it is wrapped with different medicines.</p>
+
+
+
+<p>A java class is the example of encapsulation. Java bean is the fully encapsulated class because all the data members are private here.</p>
+
+
+
+<h3>Coupling</h3>
+
+
+
+<p>Coupling refers to the knowledge or information or dependency of another class. It arises when classes are aware of each other. If a class has the details information of another class, there is strong coupling. In Java, we use private, protected, and public modifiers to display the visibility level of a class, method, and field. You can use interfaces for the weaker coupling because there is no concrete implementation.</p>
+
+
+
+<h3>Cohesion</h3>
+
+
+
+<p>Cohesion refers to the level of a component which performs a single well-defined task. A single well-defined task is done by a highly cohesive method. The weakly cohesive method will split the task into separate parts. The java.io package is a highly cohesive package because it has I/O related classes and interface. However, the java.util package is a weakly cohesive package because it has unrelated classes and interfaces.</p>
+
+
+
+<h3>Association</h3>
+
+
+
+<p>Association represents the relationship between the objects. Here, one object can be associated with one object or many objects. There can be four types of association between the objects:</p>
+
+
+
+<ul><li>One to One</li><li>One to Many</li><li>Many to One, and</li><li>Many to Many</li></ul>
+
+
+
+<p>Let’s understand the relationship with real-time examples. For example, One country can have one prime minister (one to one), and a prime minister can have many ministers (one to many). Also, many MP’s can have one prime minister (many to one), and many ministers can have many departments (many to many).</p>
+
+
+
+<p>Association can be undirectional or bidirectional.</p>
+
+
+
+<h3>Aggregation</h3>
+
+
+
+<p>Aggregation is a way to achieve Association. Aggregation represents the relationship where one object contains other objects as a part of its state. It represents the weak relationship between objects. It is also termed as a <em>has-a</em> relationship in Java. Like, inheritance represents the <em>is-a</em> relationship. It is another way to reuse objects.</p>
+
+
+
+<h3>Composition</h3>
+
+
+
+<p>The composition is also a way to achieve Association. The composition represents the relationship where one object contains other objects as a part of its state. There is a strong relationship between the containing object and the dependent object. It is the state where containing objects do not have an independent existence. If you delete the parent object, all the child objects will be deleted automatically.</p>
+
+		
+		
+			</div>
+</div>
+
+	
+</article>
+
+
+	<nav class="navigation post-navigation" role="navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-next"><a href="https://akshaya5310.github.io/code/wordpress/" rel="next">Next Post <span class="ast-right-arrow">→</span></a></div></div>
+	</nav>
+<div id="comments" class="comments-area">
+
+	
+			<div class="comments-count-wrapper">
+			<h3 class="comments-title">
+				2 thoughts on “Java OOPS Concepts”			</h3>
+		</div>
+
+		
+		<ol class="ast-comment-list">
+							<li class="comment byuser comment-author-jaga bypostauthor even thread-even depth-1" id="li-comment-2">
+
+					<article id="comment-2" class="ast-comment">
+						<div class="ast-comment-avatar-wrap"><img alt="" src="http://1.gravatar.com/avatar/45ef82e31aededb0a0a8463fbda89e86?s=50&d=mm&r=g" srcset="http://1.gravatar.com/avatar/45ef82e31aededb0a0a8463fbda89e86?s=100&d=mm&r=g 2x" class="avatar avatar-50 photo" height="50" width="50"></div><div class="ast-comment-data-wrap">
+							<div class="ast-comment-meta-wrap">
+								<header class="ast-comment-meta ast-row ast-comment-author vcard capitalize"><div class="ast-comment-cite-wrap ast-col-lg-12"><cite><b class="fn"><a href="https://akshaya5310.github.io/code" rel="external nofollow ugc" class="url">jaga</a></b> <span class="ast-highlight-text ast-cmt-post-author"></span></cite></div><div class="ast-comment-time ast-col-lg-12"><span class="timendate"><a href="https://akshaya5310.github.io/code/java-oops-concepts/#comment-2"><time datetime="2020-07-25T17:11:19+00:00">July 25, 2020 at 5:11 pm</time></a></span></div>
+								</header> 
+							</div>
+							<section class="ast-comment-content comment">
+								<p>good….</p>
+								<div class="ast-comment-edit-reply-wrap">
+																		<span class="ast-reply-link"><a rel="nofollow" class="comment-reply-link" href="https://akshaya5310.github.io/code/java-oops-concepts/" data-commentid="2" data-postid="484" data-belowelement="comment-2" data-respondelement="respond" aria-label="Reply to jaga">Reply</a></span>								</div>
+															</section> 
+						</div>
+					</article>
+				
+				<ol class="children">
+				<li class="comment byuser comment-author-jaga bypostauthor odd alt depth-2" id="li-comment-3">
+
+					<article id="comment-3" class="ast-comment">
+						<div class="ast-comment-avatar-wrap"><img alt="" src="http://1.gravatar.com/avatar/45ef82e31aededb0a0a8463fbda89e86?s=50&d=mm&r=g" srcset="http://1.gravatar.com/avatar/45ef82e31aededb0a0a8463fbda89e86?s=100&d=mm&r=g 2x" class="avatar avatar-50 photo" height="50" width="50"></div><div class="ast-comment-data-wrap">
+							<div class="ast-comment-meta-wrap">
+								<header class="ast-comment-meta ast-row ast-comment-author vcard capitalize"><div class="ast-comment-cite-wrap ast-col-lg-12"><cite><b class="fn"><a href="https://akshaya5310.github.io/code" rel="external nofollow ugc" class="url">jaga</a></b> <span class="ast-highlight-text ast-cmt-post-author"></span></cite></div><div class="ast-comment-time ast-col-lg-12"><span class="timendate"><a href="https://akshaya5310.github.io/code/java-oops-concepts/#comment-3"><time datetime="2020-07-25T17:12:02+00:00">July 25, 2020 at 5:12 pm</time></a></span></div>
+								</header> 
+							</div>
+							<section class="ast-comment-content comment">
+								<p>thank u…</p>
+								<div class="ast-comment-edit-reply-wrap">
+																		<span class="ast-reply-link"><a rel="nofollow" class="comment-reply-link" href="https://akshaya5310.github.io/code/java-oops-concepts/" data-commentid="3" data-postid="484" data-belowelement="comment-3" data-respondelement="respond" aria-label="Reply to jaga">Reply</a></span>								</div>
+															</section> 
+						</div>
+					</article>
+				
+				</li>
+</ol>
+</li>
+		</ol>
+
+		
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="/codesmashers/java-oops-concepts/#respond" style="display:none;">Cancel Reply</a></small></h3><form action="https://akshaya5310.github.io/code/wp-comments-post.php" method="post" id="ast-commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><div class="ast-row comment-textarea"><fieldset class="comment-form-comment"><div class="comment-form-textarea ast-col-lg-12"><label for="comment" class="screen-reader-text">Type here..</label><textarea id="comment" name="comment" placeholder="Type here.." cols="45" rows="8" aria-required="true"></textarea></div></fieldset></div><div class="ast-comment-formwrap ast-row"><p class="comment-form-author ast-col-xs-12 ast-col-sm-12 ast-col-md-4 ast-col-lg-4"><label for="author" class="screen-reader-text">Name*</label><input id="author" name="author" type="text" value="" placeholder="Name*" size="30" aria-required="true"></p>
+<p class="comment-form-email ast-col-xs-12 ast-col-sm-12 ast-col-md-4 ast-col-lg-4"><label for="email" class="screen-reader-text">Email*</label><input id="email" name="email" type="text" value="" placeholder="Email*" size="30" aria-required="true"></p>
+<p class="comment-form-url ast-col-xs-12 ast-col-sm-12 ast-col-md-4 ast-col-lg-4"><label for="url"><label for="url" class="screen-reader-text">Website</label><input id="url" name="url" type="text" value="" placeholder="Website" size="30"></label></p></div>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment »"> <input type="hidden" name="comment_post_ID" value="484" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div>
+	
+	
+</div>
+
+					
+					
+				
+			</main>
+			
+		
+	</div>
+
+
+	<div class="widget-area secondary" id="secondary" role="complementary" itemtype="https://schema.org/WPSideBar" itemscope="itemscope">
+	<div class="sidebar-main">
+
+		
+		
+			<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://akshaya5310.github.io/code/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></aside><aside id="recent-comments-4" class="widget widget_recent_comments"><h2 class="widget-title">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href="https://akshaya5310.github.io/code" rel="external nofollow ugc" class="url">jaga</a></span> on <a href="https://akshaya5310.github.io/code/java-oops-concepts/#comment-3">Java OOPS Concepts</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://akshaya5310.github.io/code" rel="external nofollow ugc" class="url">jaga</a></span> on <a href="https://akshaya5310.github.io/code/java-oops-concepts/#comment-2">Java OOPS Concepts</a></li></ul></aside>
+		
+		
+	</div>
+</div>
+
+
+			
+			</div> 
+
+		</div>
+
+		
+		
+		
+		<footer class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope" itemid="#colophon">
+
+			
+			
+<div class="ast-small-footer footer-sml-layout-1">
+	<div class="ast-footer-overlay">
+		<div class="ast-container">
+			<div class="ast-small-footer-wrap">
+									<div class="ast-small-footer-section ast-small-footer-section-1">
+						Hyderabad India  |  Phone: +917008973464  |  Email: akshayamahanty2014@gmail.com					</div>
+				
+									<div class="ast-small-footer-section ast-small-footer-section-2">
+						Copyright © 2020 Code Smashers					</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+			
+		</footer>
+		
+		
+	</div>
+
+	
+	<script>
+var astra = {"break_point":"780","isRtl":""};
+</script>
+<script src="https://akshaya5310.github.io/code/wp-content/themes/astra/assets/js/minified/style.min.js"></script>
+			<script>
+			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+			</script>
+			
+	</body>
+</html>
